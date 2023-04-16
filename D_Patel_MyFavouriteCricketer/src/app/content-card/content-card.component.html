@@ -4,7 +4,10 @@
         {{ CricketerName?.id }}: {{ CricketerName?.creator }}
     </h4>
 
-    <img  *ngIf="CricketerName" [src]='CricketerName? CricketerName.imgURL: ""' (click)="display_CricketerName()" alt="/" >
+    <img  *ngIf="CricketerName?.imgURL; else defaultImgURL" [src]='CricketerName? CricketerName.imgURL: ""' (click)="display_CricketerName()" alt="/" >
+    <ng-template #defaultImgURL>
+        <img [src]="defaultImg" (click)="display_CricketerName()" />
+    </ng-template>
     <p>{{ CricketerName?.description}}</p>
     <h4 *ngIf="CricketerName?.type">
         Type of play: {{ CricketerName?.type}}

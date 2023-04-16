@@ -16,7 +16,7 @@ export class ContentListComponent{
         id: 1,
         creator: "Lasith Malinga",
         description:"Srilankan Fast Bowler. Bowl with One of the deadliest speed",
-        imgURL:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Lasith_Malinga_tossing_a_cricket_ball_at_practice.jpg/800px-Lasith_Malinga_tossing_a_cricket_ball_at_practice.jpg",
+        imgURL:"",
         type:"Right-Arm Bowler",
         tags:"Yorker King",
       },

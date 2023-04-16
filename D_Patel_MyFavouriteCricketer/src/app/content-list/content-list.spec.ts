@@ -1,7 +1,7 @@
-import { ContentList } from '../helper-files/content-list';
+import { ContentListComponent } from '../content-list/content-list.component';
 
 describe('ContentList', () => {
   it('should create an instance', () => {
-    expect(new ContentList()).toBeTruthy();
+    expect(new ContentListComponent()).toBeTruthy();
   });
 });
