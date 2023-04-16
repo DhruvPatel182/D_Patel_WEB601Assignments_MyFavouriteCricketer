@@ -9,10 +9,11 @@
         <img [src]="defaultImg" (click)="display_CricketerName()" />
     </ng-template>
     <p>{{ CricketerName?.description}}</p>
-    <h4 *ngIf="CricketerName?.type">
+    <h4 *ngIf="CricketerName?.type" appHoverAffect [Hover-Affect]="'underline'">
         Type of play: {{ CricketerName?.type}}
     </h4>
-    <h4>
+    <h4 *ngIf="CricketerName?.tags" appHoverAffect [Hover-Affect]="'bold'">
         Known as: {{ CricketerName?.tags}}
     </h4>
 </div>
+<!-- *ngFor="let tag of CricketerName?.tags" appHoverAffect [Hover-Affect]="'bold'" -->
