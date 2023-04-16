@@ -1,4 +1,4 @@
-import { ContentList } from './content-list';
+import { ContentList } from '../helper-files/content-list';
 
 describe('ContentList', () => {
   it('should create an instance', () => {

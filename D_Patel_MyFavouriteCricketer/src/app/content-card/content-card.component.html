@@ -1,1 +1,15 @@
-<p>content-card works!</p>
+
+<div class="content-card">
+    <h4>
+        {{ CricketerName?.id }}: {{ CricketerName?.creator }}
+    </h4>
+
+    <img  *ngIf="CricketerName" [src]='CricketerName? CricketerName.imgURL: ""' (click)="display_CricketerName()" alt="/" >
+    <p>{{ CricketerName?.description}}</p>
+    <h4 *ngIf="CricketerName?.type">
+        Type of play: {{ CricketerName?.type}}
+    </h4>
+    <h4>
+        Known as: {{ CricketerName?.tags}}
+    </h4>
+</div>

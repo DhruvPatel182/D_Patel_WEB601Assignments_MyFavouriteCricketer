@@ -1,0 +1,16 @@
+    
+    <header><h1>My Favourite Cricketers</h1></header>
+<div class="input">
+    <input #PlayerName placeholder="Enter Player's Name" ><button (click)="findPlayerName(PlayerName.value)">Search Player's Name</button>
+    <p class="PlayerExist" *ngIf="message == 'Player Found in the List'">Player Found!</p>
+    <p class="PlayerNotExist" *ngIf="message == 'Player does not found!'">Player Does not Found!</p>
+</div>
+<div class="content-card">
+<h2>List Of Right-Arm Bowlers</h2>
+<app-content-card class="RAB" *ngFor='let item of (CricketerName | playerTypeEdit: "Right-Arm Bowler")' [CricketerName]="item"></app-content-card><br /><br />
+<h2>List of Right-Hand Batsman</h2>
+<app-content-card class="RHB" *ngFor='let item of (CricketerName | playerTypeEdit: "Right-Hand Batsman")' [CricketerName]="item"></app-content-card><br /><br />
+<h2>List of Left-Hand Batsman</h2>
+<app-content-card class="LHB" *ngFor='let item of (CricketerName | playerTypeEdit: "")' [CricketerName]="item"></app-content-card><br /><br />
+
+</div>
