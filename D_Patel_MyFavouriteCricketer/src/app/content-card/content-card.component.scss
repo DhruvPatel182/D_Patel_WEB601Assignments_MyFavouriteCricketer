@@ -1,0 +1,27 @@
+
+:host{
+    &.h2{
+      text-align: center;
+    }
+    display: block;
+    width: 500px;
+    text-align: center;
+    margin: 8px auto;
+    border: 2px solid #000;
+    padding: 8px;
+    &.is-odd {
+      // & means this selector is applied directly to :host
+      background-color: green;
+    }
+    &.is-even{
+      // & means this selector is applied directly to :host
+      background-color: lightgray;    
+    }
+    img{
+        height: 250px;
+        width: 220px;
+    }
+    &.first-card{
+        border: 2px solid black;
+    }
+}
