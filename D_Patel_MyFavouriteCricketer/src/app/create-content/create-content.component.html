@@ -1,0 +1,19 @@
+<div class="create-content">
+    <h2>Add New Content</h2>
+<form class="newContent">
+    <label for="id">Id:-</label>
+<input type="text" id="id" [(ngModel)]="newContent.id" name="id" required><br /><br />
+<label>Player's Name:-</label>
+<input type="text" id="creator" [(ngModel)]="newContent.Creator" name="creator" required><br /><br />
+<label>Few Words About Player:-</label>
+<textarea type="textarea" id="description" rows="5" [(ngModel)]="newContent.description" name="description" required></textarea><br /><br />
+<label>Type(Right Hand/Left Hand Batsman/Bowler):-</label>
+<input type="text" id="type" [(ngModel)]="newContnet.type" name="type" required><br /><br />
+<label>ImgLink:-</label>
+<input type="image" id="imgURL" [(ngModel)]="newContent.imgURL" name="imgURL" required><br /><br />
+<label>Known as:-</label>
+<input type="text" id="tags" [(ngModel)]="newContent.tags" name="tags" required><br /><br />
+<button type="submit" (click)="onSubmit()">Submit</button>
+<div *ngIf="errorMessage" style="font: 2px solid red; font-weight: bold;">{{ errorMessage }}</div>
+</form><br />
+</div>
